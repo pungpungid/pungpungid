@@ -1,0 +1,25 @@
+[Unit]
+Description=App TKJ - CMS & Mikrotik Academy Platform
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/app-tkj
+ExecStart=/opt/app-tkj/app-tkj
+Restart=always
+RestartSec=3
+Environment="PORT=8090"
+Environment="DATABASE_URL=postgres://user:password@192.168.88.201:5432/db_web_tkj"
+Environment="SESSION_KEY=your-secure-session-key-change-in-production"
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=app-tkj
+
+[Install]
+WantedBy=multi-user.target

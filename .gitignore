@@ -1,0 +1,37 @@
+```
+# Dependencies
+vendor/
+
+# Compiled and build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.out
+
+# Go-specific
+*.test
+*.prof
+cover.out
+coverage/
+go/pkg/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Build artifacts
+app-tkj/app-tkj
+```
